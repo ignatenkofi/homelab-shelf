@@ -1,0 +1,19 @@
+# Whitelist pattern: ignore everything by default, then explicitly allow.
+
+# 1. Ignore everything at the root
+/*
+
+# 2. But keep .gitignore itself and the DOCS/ folder structure
+!.gitignore
+!/DOCS/
+
+# 3. Inside DOCS/, ignore all direct contents
+/DOCS/*
+
+# 4. But keep these two subdirectories (and everything inside them)
+!/DOCS/compressed/
+!/DOCS/markdown/
+
+# 5. Always ignore OS junk anywhere
+.DS_Store
+Thumbs.db
