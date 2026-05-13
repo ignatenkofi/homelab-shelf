@@ -1,0 +1,3 @@
+## File share 
+
+File share function allows you to use your routers external storage to share files with anyone on the internet. Simply attach a USB, nVME or any supported drive to your device, and then add whole directory paths to the fileshare menu. The router will use the MikroTik cloud service to issue a HTTPS certificate and a domain name for your router. The URL which you can then distribute to anyone will be shown in the file-share menu. You can also enable ability for anyone to upload files into your router. The URL is randomly generated, so while it is available to anyone who knows the link, if you keep it safe, only people with the link will be able to use it.

@@ -1,0 +1,11 @@
+## Radios 
+
+Information about the capabilities of each radio can be gained by running the `/interface/wifi/radio print detail` command. 
+
+**==> picture [427 x 574] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>2g-channels  (list of integers) Frequencies supported in the 2.4GHz band.<br>5g-channels  (list of integers) Frequencies supported in the 5GHz band.<br>bands  (list of strings) Supported frequency bands, wireless standards, and channel widths.<br>ciphers  (list of strings) Supported encryption ciphers.<br>countries  (list of strings) Regulatory domains supported by the interface.<br>hw-caps  (list of strings) Additional supported features (e.g. sniffer, qos-classifier-dscp).<br>hw-type  (string) Radio hardware model number.<br>max-interfaces  (integer) Maximum number of logical interfaces.<br>max-peers  (integer) Maximum number of associated peers (connected stations).<br>max-station-interfaces  (integer) Maximum number of logical interfaces in station mode.<br>max-vlans  (integer) Maximum number of different per-user VLANs.<br>min-antenna-gain  (integer) Minimum antenna gain permitted for the interface.<br>phy-id  (string) A unique identifier.<br>radio-mac  (MAC) MAC address of the radio interface. Can be used to match radios to interface configurations.<br>rx-chains  (list of integers) IDs for radio chains available for receiving radio signals.<br>tx-chains  (list of integers) IDs for radio chains available for transmitting radio signals.<br>Remote CAP<br>Information about the remote CAPs can be seen by running the `/interface/wifi/capsman/remote-cap print detail` command.<br>Property Description<br>address (IP address/MAC address%interface) IP address of CAP or MAC address used to connect to CAPsMAN<br>identity  (list of integers) Configured system identity of CAP<br>board-name  (string) Describes the model name<br>serial  (string) The serial number of CAP<br>version  (string) RouterOS version of CAP<br>base-mac  (MAC address) Base-MAC provided by CAP in the form: '[XX:XX:XX:XX:XX:XX]'<br>common-name  (string) Common name of the CAP<br>connected-time  (time) Time interval passed since CAP connected to CAPsMAN<br>uptime  (time) Time interval passed since boot-up<br>**----- End of picture text -----**<br>
+
+
+1363

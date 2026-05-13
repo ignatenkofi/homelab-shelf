@@ -1,0 +1,3 @@
+## CRS1xx/2xx series switches examples 
+
+Summary Port switching Management access configuration Untagged Tagged VLAN Port Based VLAN Example 1 (Trunk and Access ports) Example 2 (Trunk and Hybrid Ports) Protocol Based VLAN MAC Based VLAN InterVLAN Routing Unknown/Invalid VLAN filtering VLAN Tunneling (Q-in-Q) CVID Stacking Mirroring Port-Based Mirroring VLAN Based Mirroring MAC Based Mirroring Trunking Limited MAC Access per Port Isolation Port Level Isolation Protocol Level Isolation Quality of Service (QoS) MAC-based traffic scheduling using internal Priority MAC-based traffic shaping using internal Priority VLAN-based traffic scheduling + shaping using internal Priorities PCP-based traffic scheduling Bandwidth Limiting Traffic Storm Control See also

@@ -1,0 +1,62 @@
+## Routing Tables 
+
+A router can have multiple routing tables with its own set of routes routing the same destination to different gateways. 
+
+Tables can be seen and configured from the `/routing/table` menu. By default, RouterOS has only the ' main ' routing table: 
+
+```
+[admin@rack1_b33_CCR1036] /routing/table> print
+Flags: D - dynamic; X - disabled, I - invalid; U - used
+0 D name="main" fib
+```
+
+If a custom routing table is required, it should be defined in this menu prior to using it anywhere in the configuration. 
+
+Let's consider a basic example where we have two gateways 172.16.1.1 and 172.16.2.1 and we want to resolve 8.8.8.8 only in the routing table named ' my Table ' to the gateway 172.16.2.1: 
+
+```
+/routing table add name=myTable fib
+/ip route add dst-address=8.8.8.8 gateway=172.16.1.1
+/ip route add dst-address=8.8.8.8 gateway=172.16.2.1@main routing-table=myTable
+```
+
+**==> picture [13 x 13] intentionally omitted <==**
+
+For a user-created table to be able to resolve the destination, the main routing table should be able to resolve the destination too. 
+
+In our example, the main routing table should also have a route to destination 8.8.8.8 or at least a default route, since the default route is dynamically added by the DHCP for safety reasons it is better to add 8.8.8.8 also in the main table. 
+
+1065 
+
+```
+[admin@rack1_b33_CCR1036] /ip/route> print detail Flags: D - dynamic; X - disabled, I - inactive, A - active;
+c - connect, s - static, r - rip, b - bgp, o - ospf, d - dhcp, v - vpn, m - modem, y - cop
+y;
+```
+
+```
+H - hw-offloaded; + - ecmp
+   DAd   dst-address=0.0.0.0/0 routing-table=main pref-src="" gateway=172.16.1.1
+         immediate-gw=172.16.1.1%ether8 distance=1 scope=30 target-scope=10
+         vrf-interface=ether8 suppress-hw-offload=no
+ 0  As   dst-address=8.8.8.8/32 routing-table=main pref-src="" gateway=172.16.1.1
+         immediate-gw=172.16.1.1%ether8 distance=1 scope=30 target-scope=10 suppress-hw-offload=no
+    DAc   dst-address=172.16.1.0/24 routing-table=main gateway=ether8 immediate-gw=ether8
+         distance=0 scope=10 suppress-hw-offload=no local-address=172.16.1.2%ether8
+    DAc   dst-address=172.16.2.0/24 routing-table=main gateway=ether7 immediate-gw=ether7
+         distance=0 scope=10 suppress-hw-offload=no local-address=172.16.2.2%ether7
+ 1  As   dst-address=8.8.8.8/32 routing-table=myTable pref-src="" gateway=172.16.2.1
+         immediate-gw=172.16.2.1%ether7 distance=1 scope=30 target-scope=10 suppress-hw-offload=no
+```
+
+But configuration above is not enough, we need a method to force the traffic to actually use our newly created table. RouterOS gives you two options to choose from: 
+
+firewall mangle - it gives more control over the criteria to be used to steer traffic, for example, per connection or per packet balancing, etc. For more info on how to use mangle marking see Firewall Marking examples. 
+
+routing rules - a basic set of parameters that can be used to quickly steer traffic. This is the method we are going to use for our example. 
+
+It is not recommended to use both methods at the same time or you should know exactly what you are doing. If you really do need to use both mangle and routing rules in the same setup then keep in mind that mangle has higher priority, meaning if the mangle marked traffic can be resolved in the table then route rules will never see this traffic. 
+
+**==> picture [13 x 13] intentionally omitted <==**
+
+Routing table count is limited to 4096 unique tables.

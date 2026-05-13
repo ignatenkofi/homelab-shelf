@@ -1,0 +1,6 @@
+## Read-only properties 
+
+**==> picture [516 x 300] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>dynamic  (yes |  Whether an item is dynamically created.<br>no)<br>expires-after  (ti The time period after which binding expires.<br>me)<br>last-seen  (time) Time period since the client was last seen.<br>status  (waiting  Three status values are possible:<br>| offered |<br>bound) waiting  - Shown for static bindings if it is not used. For dynamic bindings this status is shown if it was used previously, the server<br>will wait 10 minutes to allow an old client to get this binding, otherwise binding will be cleared and prefix will be offered to other<br>clients.<br>offered  - if solicit message was received, and the server responded with advertise  a message, but the  request was not received.<br>During this state client have 2 minutes to get this binding, otherwise, it is freed or changed status to waiting for static bindings.<br>bound  - currently bound.<br>reconfigure- Reconfiguration authentication key<br>key  (string)<br>reconfigure- Count of sent Reconfigure (forcerenew) messages<br>last-sent  (integ<br>er)<br>reconfigure-<br>status<br>**----- End of picture text -----**<br>

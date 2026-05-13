@@ -1,0 +1,38 @@
+## Discovery configuration 
+
+It is possible to change whether an interface participates in neighbor discovery or not using an Interface list. If the interface is included in the discovery interface list, it will send out basic information about the system and process received discovery packets broadcasted in the Layer2 network. Removing an interface from the interface list will disable both the discovery of neighbors on this interface and also the possibility of discovering this device itself on that interface. 
+
+```
+/ip neighbor discovery-settings
+```
+
+**==> picture [516 x 422] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>discover- Interface list on which members the discovery protocol will run on.<br>interface-list  (stri<br>ng; Default: static<br>)<br>discover-interval Adjusts the frequency at which neighbor discovery packets are transmitted. It also adjusts the Time-to-Live (TTL) TLV value for CDP<br>(time: 5s.. and LLDP packets using the formula: ( discover-interval  * 4) + 1. The setting is available since RouterOS version 7.16.<br>9h6m8s; Default:<br>30s )<br>lldp-dcbx  (yes |  Whether to send Data Center Bridging Capabilities Exchange Protocol (DCBX) TLVs, which allows to communicate switch QoS<br>no; Default:  no ) settings and capabilities with other neighboring devices using LLDP. Only applies to CRS3xx, CRS5xx, CCR2116 and CCR2216<br>devices.<br>Enabled DCBX includes the following TLVs:<br>1.   ETS (Enhanced Transmission Selection) Configuration TLV . This TLV is used to share the switch's ETS configuration. It<br>includes:<br>a.  The willingness bit, which indicates whether the device is willing to accept QoS configuration from neighboring devices. In<br>RouterOS, the willing bit is set to disabled, meaning the switch will not accept remote configurations and instead uses its<br>own settings.<br>b.  The priority assignment table, which maps priorities to specific traffic-class.<br>c.  The bandwidth allocation table, where RouterOS calculates the percentage of bandwidth allocated to each queue based<br>on the  weight  property. This applies to queues using the  high-priority-group  in the  /interface/ethernet<br>/switch/qos/tx-manager/queue  settings.<br>d.  The Transmission Selection Algorithm (TSA) table, where  high-priority-group  queues are assigned to ETS,  strict<br>-priority  queues to Strict Priority, and  low-priority-group  or non-hardware offloaded queues to the Vendor<br>Specific Algorithm.<br>2.   ETS Recommendation TLV . This provides a recommendation on how neighboring devices should configure ETS. RouterOS<br>uses the same data as in the ETS Configuration TLV to give its recommendation.<br>3.   Priority-based Flow Control Configuration TLV . This TLV is used to share PFC configuration. Similar to the ETS TLV, the<br>willingness bit is set to disabled, meaning the switch does not accept remote PFC configurations. PFC is enabled for specific<br>priorities based on settings configured under  /interface/ethernet/switch/qos/priority-flow-control , and  /inte<br>rface/ethernet/switch/qos/port .<br>4.   Application Priority TLV . This TLV is used to communicate how different applications are prioritized in the network.<br>5.   Application VLAN TLV . This TLV is used to share VLAN configurations for applications. RouterOS currently does not support<br>sending values in this TLV and will send an empty VLAN table instead.<br>**----- End of picture text -----**<br>
+
+
+1149 
+
+**==> picture [516 x 577] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+lldp-mac-phy- Whether to send MAC/PHY Configuration/Status TLV in LLDP, which indicates the interface capabilities, current setting of the<br>config  (yes | no;  duplex status, bit rate, and auto-negotiation. Only applies to the Ethernet interfaces. While TLV is optional in LLDP, it is mandatory<br>Default:  no ) when sending LLDP-MED, meaning this TLV will be included when necessary even though the property is configured as disabled.<br>lldp-max-frame- Whether to send Maximum Frame Size TLV in LLDP, which indicates the maximum frame size capability of the interface in bytes ( l2<br>size  (yes | no;  mtu  + 18). Only applies to the Ethernet interfaces.<br>Default:  no )<br>lldp-poe-power  ( Two specific TLVs facilitate Power over Ethernet (PoE) management between Power Sourcing Equipment (PSE) and Powered<br>yes | no;  Devices (PD):<br>Default:  yes )<br>IEEE 802.3 Organizationally Specific  Power Via MDI  TLV<br>TIA-1057 (LLDP-MED) Organizationally Specific  Extended Power via MDI  TLV<br>The  lldp-poe-power  attribute determines whether to transmit the IEEE 802.3 Organizationally Specific Power Via MDI TLV in<br>LLDP messages.<br>The transmission of LLDP-MED Organizationally Specific Extended Power via MDI TLV is not configurable. It is automatically<br>included in outgoing LLDP-MED packets when the remote device has transmitted LLDP-MED capability of receiving power.<br>These TLVs are relevant only for Ethernet interfaces that support PoE-Out. The setting is available since RouterOS version 7.15,<br>and it replaces PoE-out port  poe-lldp-enabled  setting.<br>lldp-med-net- Advertised VLAN ID for LLDP-MED Network Policy TLV. This allows assigning a VLAN ID for LLDP-MED capable devices, such as<br>policy-vlan  (integ VoIP phones. The TLV will only be added to interfaces where LLDP-MED capable devices are discovered. Other TLV values are<br>er 0..4094;  predefined and cannot be changed:<br>Default: disabled )<br>Application Type - Voice<br>VLAN Type - Tagged<br>L2 Priority - 0<br>DSCP Priority - 0<br>When used together with the bridge interface, the (R/M)STP protocol should be enabled with  protocol-mode  setting.<br>Additionally, other neighbor discovery protocols (e.g. CDP) should be excluded using  protocol  setting to avoid LLDP-MED<br>misconfiguration.<br>lldp-vlan-info  (ye Whether to send IEEE 802.1 Organizationally Specific TLVs in LLDP related to VLANs.<br>s | no; Default: no<br>) When this setting is enabled, three TLVs are advertised:<br>Port VLAN ID. This applies to the bridge port's  pvid  property.<br>Port And Protocol VLAN ID. This TLV is not used and always indicates "not supported" and "not enabled".<br>VLAN Name. This includes up to 10 active VLANs from the " /interface/bridge/vlan " table.<br>These TLVs are relevant to interfaces that are added to a vlan-filtering bridge, and the setting is available since RouterOS version<br>7.16.<br>mode  (rx-only |  Selects the neighbor discovery packet sending and receiving mode. The setting is available since RouterOS version 7.7.<br>tx-only | tx-and-<br>rx; Default: tx-<br>and-rx )<br>protocol  (cdp |  List of used discovery protocols.<br>lldp | mndp;<br>Default:  cdp,lldp,<br>mndp )<br>**----- End of picture text -----**<br>
+
+
+Since RouterOS v6.44, neighbor discovery is working on individual slave interfaces. Whenever a master interface (e.g. bonding or bridge) is included in the discovery interface list, all its slave interfaces will automatically participate in neighbor discovery. It is possible to allow neighbor discovery only to some slave interfaces. To do that, include the particular slave interface in the list and make sure that the master interface is not included. 
+
+1150 
+
+```
+/interface bonding
+add name=bond1 slaves=ether5,ether6
+/interface list
+add name=only-ether5
+/interface list member
+add interface=ether5 list=only-ether5
+/ip neighbor discovery-settings
+set discover-interface-list=only-ether5
+```
+
+Now the neighbor list shows a master interface and actual slave interface on which a discovery message was received.

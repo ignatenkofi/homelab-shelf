@@ -28,5 +28,6 @@ DOCS/markdown/INTEL_X550_DS.md
 !/DOCS/markdown/INTEL_X550/**
 
 # MIKROTIK RouterOS — kept as single file (PDF extract too noisy to split cleanly).
-# Auto-generated split lives locally only.
-DOCS/markdown/MIKROTIK_RouterOS/
+# Auto-generated split — NOW tracked (hierarchical 2-level INDEX)
+!/DOCS/markdown/MIKROTIK_RouterOS/
+!/DOCS/markdown/MIKROTIK_RouterOS/**

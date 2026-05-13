@@ -1,0 +1,7 @@
+## Mirroring 
+
+Mirroring is a function that allows a network switch to duplicate all the data passing through it and send a copy to another specified port, known as the `mirr or-target` . This feature is useful for setting up a tap device, which allows for analyzing network traffic using a separate device. You can set up mirroring in a simple way by designating source ports (see `mirror-egress` and `mirror-ingress` in `/interface/ethernet/switch/port` ), or you can configure more advanced mirroring based on different criteria (see `mirror` in `/interface/ethernet/switch/rule` ). 
+
+It is important to note that the `mirror-target` port must be on the same switch. You can check the device block diagram or navigate to the `/interface /ethernet` menu to identify which interfaces are connected where. When setting up the configration, it is not mandatory to add the `mirror-target` interface to the same hardware offloaded bridge where the source ports are set up. The `mirror-target` port can be a standalone interface (not configured as a bridge port), or it can be within a bridge setup. When using the `mirror-target` with a bridge, note that data and mirrored traffic may both travel on the same LAN. In such cases, consider employing RSPAN (Remote Switch Port Analyzer), where mirrored traffic is encapsulated into a separate VLAN before being transmitted over the network. 
+
+Additionally, you can set the `mirror-target` port to a special value "cpu", which means that the copied packets will be sent to the switch chip's CPU port.

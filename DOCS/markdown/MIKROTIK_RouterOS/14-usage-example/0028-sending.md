@@ -1,0 +1,5 @@
+## Sending 
+
+```
+/tool sms send
+```

@@ -1,0 +1,3 @@
+## CRS3xx, CRS5xx, CCR2116, CCR2216 switch chip features 
+
+Summary Features Models Abbreviations Port switching VLAN VLAN Filtering Port-Based VLAN MAC Based VLAN Protocol Based VLAN VLAN Tunneling (Q-in-Q) Ingress VLAN translation (R/M)STP Bonding Multi-chassis Link Aggregation Group L3 Hardware Offloading Port isolation IGMP/MLD Snooping DHCP Snooping and DHCP Option 82 Mirroring Configuration examples Port Based Mirroring VLAN Based Mirroring MAC Based Mirroring IP Based Mirroring Remote Switch Port Analyzer Property Reference Traffic Shaping Traffic Storm Control MPLS hardware offloading Switch Rules (ACL) Port Security Dual Boot Configuring SwOS using RouterOS See also

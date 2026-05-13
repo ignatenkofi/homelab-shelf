@@ -1,0 +1,6 @@
+## Read-only properties 
+
+**==> picture [506 x 305] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>duid  (string) Auto-generated DUID that is sent to the server. DUID is generated using one of the<br>MAC addresses available on the router.<br>request  (list) specifies what was requested - prefix, address, or both.<br>dynamic  (yes | no)<br>expires-after  (time) A time when the IPv6 prefix expires (specified by the DHCPv6 server).<br>invalid  (yes | no) Shows whether a configuration is invalid.<br>prefix  (IPv6 prefix) Shows received IPv6 prefix from DHCPv6-PD server<br>status  (stopped | searching | requesting... | bound | renewing  Shows the status of DHCPv6 Client:<br>| rebinding | error | stopping)<br>stopped  - dhcpv6 client is stopped<br>searching  - sending "solicit" and trying to get "advertise"<br>requesting  - sent "request" waiting for "reply"<br>bound  - received "reply". Prefix assigned.<br>renewing  - sent "renew", waiting for "reply"<br>rebinding  - sent "rebind", waiting for "reply"<br>error  - reply was not received in time or some other error occurred.<br>stopping  - sent "release"<br>reconfigure-key  (string) Reconfiguration authentication key<br>reconfigure-last-counter  (integer) Count of recieved forcerenew messages<br>**----- End of picture text -----**<br>

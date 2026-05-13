@@ -1,0 +1,39 @@
+## Enable Root guard 
+
+In this example, ether1 is configured with `restricted-role=yes.` It prevented the port from becoming the root port for the CIST or any MSTI, regardless of its best spanning tree priority vector. Such a port will be selected as an Alternate Port (discarding state) and remains so as long as it continues to receive superior BPDUs. It will automatically transition to the forwarding state when it no longer detects a superior root path. Network administrators may enable this setting to safeguard against external bridges influencing the active spanning tree. 
+
+```
+/interface bridge
+add name=bridge1
+/interface bridge port
+add bridge=bridge1 interface=ether1 restricted-role=yes
+add bridge=bridge1 interface=ether2
+[admin@MikroTik] /interface/bridge/port monitor [find]
+                  interface: ether1                   ether2
+                     status: in-bridge                in-bridge
+                    port-id: 0x80.1                   0x80.2
+                       role: alternate-port           designated-port
+                  edge-port: no                       yes
+        edge-port-discovery: yes                      yes
+        point-to-point-port: yes                      yes
+               external-fdb: no                       no
+               sending-rstp: yes                      yes
+                   learning: no                       yes
+                 forwarding: no                       yes
+           actual-path-cost: 2000                     2000
+    internal-root-path-cost: 2000
+       designated-bridge-id: 0x7000.64:D1:54:C7:3A:6E
+   designated-internal-cost: 0                        0
+         designated-port-id: 0x80.1                   0x80.2
+  designated-remaining-hops: 20                       20
+                 tx-rx-bpdu: 2/363                    4/1049
+        discard-transitions: 0                        0
+        forward-transitions: 0                        0
+                   tx-rx-tc: 0/2                      2/4
+           topology-changes: 0                        1
+       last-topology-change:                          34m53s
+           multicast-router: no                       yes
+           hw-offload-group: switch1                  switch1
+          declared-vlan-ids:
+        registered-vlan-ids:
+```

@@ -1,0 +1,5 @@
+## Bridging and Switching 
+
+Other resources: 
+
+Summary Bridge Interface Setup Example Bridge Monitoring Spanning Tree Protocol Per-port STP Create edge ports Drop received BPDUs Enable BPDU guard Enable Root guard Bridge Settings Port Settings Example Interface lists Interface lists in VLAN table Bridge Port Monitoring Hosts Table Monitoring Static entries Multicast Table Static entries Bridge Hardware Offloading Example Bridge VLAN Filtering Bridge VLAN table Bridge port settings Bridge host table VLAN Example - Trunk and Access Ports VLAN Example - Trunk and Hybrid Ports VLAN Example - InterVLAN Routing by Bridge Management access configuration Untagged access without VLAN filtering Tagged access without VLAN filtering Tagged access with VLAN filtering Untagged access with VLAN filtering Changing untagged VLAN for the bridge interface VLAN Tunneling (QinQ) Tag stacking MVRP Property Reference Fast Forward IGMP/MLD Snooping DHCP Snooping and DHCP Option 82 Bridge Firewall Bridge Packet Filter Bridge NAT See also

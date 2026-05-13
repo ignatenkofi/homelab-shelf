@@ -1,0 +1,3 @@
+## Sub-menu: `/interface 6to4` 
+
+6to4 is a special mechanism that allows IPv6 packets to be transmitted over IPv4 networks without the need of explicitly configured tunnel interfaces. It is especially useful for connecting two or more IPv6 networks over a network that does not have IPv6 support. There are two different ways of 6to4 mechanism. If remote-address is not configured, the router will encapsulate and send an IPv6 packet directly over IPv4 if the first 16 bits are 2002, using the next 32 bits as the destination (IPv4 address converted to hex). In other case, the IPv6 packet will be sent directly to the IPv4 remote-address.

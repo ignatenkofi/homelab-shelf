@@ -1,0 +1,7 @@
+## Ack Filter 
+
+ACK or acknowledgement filters are a feature of the Cake algorithm that allows for the handling of TCP ACK (acknowledgment) packets. TCP ACK packets are essential to the function of the TCP protocol; they acknowledge the receipt of TCP segments, providing a form of flow control. However, these packets can consume a significant portion of your upload bandwidth, especially when downloading large files. By implementing ACK filtering, Cake can compress these ACKs, reducing their impact on upload bandwidth. 
+
+1. ack-filter - This enables the ACK filter feature. With this option, Cake will attempt to identify and filter out ACK packets that do not convey significant new information or do not need to be sent immediately, helping to improve the utilization of the upload bandwidth. 
+
+2. ack-filter-aggressive - This is a more aggressive version of the ack-filter option. It will result in more ACK packets being compressed or filtered out, which can lead to further improvements in upload bandwidth utilization but may potentially impact TCP performance.The use of the ack-filter or ack-filter-aggressive options depends on your specific network conditions and requirements. For instance, if you find that ACK packets are using a large portion of your available upload bandwidth, then enabling the ACK filter might help. On the other hand, if you're experiencing issues with TCP performance and suspect that ACK filtering might be contributing, you could try disabling it or using the less aggressive option.

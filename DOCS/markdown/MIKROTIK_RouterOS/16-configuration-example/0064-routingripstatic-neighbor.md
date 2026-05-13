@@ -1,0 +1,1 @@
+## `/routing/rip/static-neighbor`

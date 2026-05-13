@@ -1,0 +1,3 @@
+## Temperature 
+
+Routers that support temperature monitoring will display temperature reading. In CLI/Winbox it will display degrees Celsius. Using scripts/API/SNMP this value will be shown in CLI/Winbox multiplied by 10. There are various temperature sensors depending on the device. These sensors may refer to: cputemperature, pcb-temperature, sfp-temperature. Device tested ambient temperature range you can find in specification description at mikrotik.com. Tested ambient temperature range is temperature in which device can be physically located. It is not the same as temperature which reports system health monitor!

@@ -1,0 +1,3 @@
+## Scripting 
+
+Scripting language manual Line structure Command-line Physical Line Comments Example Line joining Example Whitespace between tokens Scopes Global scope Local scope Keywords Delimiters Data types Constant Escape Sequences Example Operators Arithmetic Operators Relational Operators Logical Operators Bitwise Operators Concatenation Operators Other Operators Variables Reserved variable names Commands Global commands Menu specific commands Common commands import print parameters Loops and conditional statements Loops Conditional statement Functions Catch run-time errors Operations with Arrays Script repository Environment Job Script permissions See also Videos on Scripting

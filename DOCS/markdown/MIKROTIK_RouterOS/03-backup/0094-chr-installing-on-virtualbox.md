@@ -1,0 +1,1 @@
+## CHR: installing on VirtualBox

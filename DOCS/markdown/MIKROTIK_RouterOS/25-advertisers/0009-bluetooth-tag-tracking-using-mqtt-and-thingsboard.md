@@ -1,0 +1,3 @@
+## Bluetooth tag-tracking using MQTT and ThingsBoard 
+
+Introduction Setup requirements: Scenario explanation Example #1 Configuration ThingsBoard preparation RouterOS configuration Preparation MQTT broker Script Scheduler ThingsBoard data visualization and result verification Example #2 Configuration ThingsBoard preparation RouterOS configuration Preparation MQTT broker Script Script that includes temperature data (optional) Script that includes GPS data (optional) Scheduler ThingsBoard data visualization and result verification Temperature visualization (optional) GPS coordinate visualization (optional)

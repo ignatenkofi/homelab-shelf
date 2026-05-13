@@ -1,0 +1,3 @@
+## User Manager 
+
+Overview Attributes Database Limitations Payments Profiles Profile Limitations Routers Sessions Settings Advanced Users User Groups User Profiles WEB Interface Application Guides Batch user creation Providing NAS with custom RADIUS attributes Static IP address for a user Specifying address pool for a group of users Using TOTP (time-based one-time password) for user authentication Exporting user credentials Printable login credentials for a single user Multiple user credential export Generating usage report Purchasing a profile Migrating from RouterOS v6 Application Examples Basic L2TP/IPsec server with User Manager authentication Two factor authentication for RouterOS user login (MFA/2FA)

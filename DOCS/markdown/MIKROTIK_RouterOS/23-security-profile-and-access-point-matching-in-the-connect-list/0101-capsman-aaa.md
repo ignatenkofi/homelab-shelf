@@ -1,0 +1,8 @@
+## CAPsMAN AAA 
+
+Settings to configure CAPsMAN AAA functionality are found in the /caps-man aaa menu: 
+
+**==> picture [506 x 202] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>mac-format  (string; Default: X Controls how the MAC address of the client is encoded by Access Point in the User-Name attribute of the MAC<br>X:XX:XX:XX:XX:XX ) authentication and MAC accounting RADIUS requests.<br>mac-mode  (as-username |  By default Access Point uses an empty password, when sending Access-Request during MAC authentication. When<br>as-username-and-password;  this property is set to as-username-and-password, Access Point will use the same value for the User-Password<br>Default: as username ) attribute as for the User-Name attribute.<br>mac-caching  (disabled | time- If this value is set to a time interval, the Access Point will cache RADIUS MAC authentication responses for a<br>interval; Default: disabled ) specified time, and will not contact the RADIUS server if matching cache entry already exists. The value disabled will<br>disable the cache, Access Point will always contact the RADIUS server.<br>interim-update  (disabled |  When RADIUS accounting is used, Access Point periodically sends accounting information updates to the RADIUS<br>time-interval; Default: disabled server. This property specifies the default update interval that can be overridden by the RADIUS server using the Acc<br>) t-Interim-Interval attribute.<br>called-format  (mac | mac: Format of how the "called-id" identifier will be passed to RADIUS. When configuring radius server clients, you can<br>ssid | ssid; Default: mac:ssid ) specify "called-id" in order to separate multiple entires.<br>**----- End of picture text -----**<br>

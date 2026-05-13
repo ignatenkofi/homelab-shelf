@@ -1,0 +1,1 @@
+## CAPsMAN - OWE configuration example:

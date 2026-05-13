@@ -1,0 +1,6 @@
+## Read only properties 
+
+**==> picture [516 x 319] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>dynamic-address  (ip/ipv6  Dynamically assigned an IP address by mode config<br>address)<br>last-seen  (time) Duration since the last message received by this peer.<br>local-address  (ip/ipv6 address) Local address on the router used by this peer.<br>natt-peer  (yes | no) Whether NAT-T is used for this peer.<br>ph2-total  (integer) The total amount of active IPsec security associations.<br>remote-address  (ip/ipv6  The remote peer's ip/ipv6 address.<br>address)<br>responder  (yes | no) Whether the connection is initiated by a remote peer.<br>rx-bytes  (integer) The total amount of bytes received from this peer.<br>rx-packets  (integer) The total amount of packets received from this peer.<br>side  (initiator | responder) Shows which side initiated the Phase1 negotiation.<br>state  (string) State of phase 1 negotiation with the peer. For example, when phase1 and phase 2 are negotiated it will show state<br>"established".<br>tx-bytes  (integer) The total amount of bytes transmitted to this peer.<br>tx-packets  (integer) The total amount of packets transmitted to this peer.<br>uptime  (time) How long peers are in an established state.<br>**----- End of picture text -----**<br>

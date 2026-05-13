@@ -1,0 +1,17 @@
+## Bridge Settings 
+
+Under the bridge settings menu, it is possible to control certain features for all bridge interfaces and monitor global bridge counters. 
+
+Sub-menu: `/interface bridge settings` 
+
+358 
+
+**==> picture [502 x 545] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>use-ip-firewall  (y Direct bridged traffic to IP/IPv6 firewall (prerouting, forward, and postrouting sections of IP/IPv6 routing, see more details on Pack<br>es | no; Default: et Flow article). Below are some use cases when this setting can be enabled to accomplish certain tasks:<br>no )<br>In case you want to assign Simple Queues or global Queue Tree for traffic flowing through bridged ports.<br>In case you want to use IP/IPv6 firewall capabilities for traffic flowing through bridged ports, which would normally bypass IP<br>/IPv6 firewall.<br>Enabling the  use-ip-firewall  feature will turn off bridge Fast Path, which in turn affects the ability to fasttrack<br>connections going over that bridge. And because this setting introduces additional processing steps (prerouting,<br>forward and postrouting chains), it will increase CPU usage even more when forwarding packets.<br>Routed traffic , including traffic from VLAN interfaces (e.g., /interface/vlan created on the bridge),  is already processed<br>by the IP firewall . In such cases, enabling this setting has no additional effect.<br>use-ip-firewall- Direct bridged un-encrypted PPPoE encapsulated traffic to IP/IPv6 firewall. This property only has an effect when  use-ip-<br>for-pppoe  (yes |  firewall is set to yes .<br>no; Default: no )<br>use-ip-firewall- Direct bridged VLAN tagged traffic to IP/IPv6 firewall. This property only has an effect when use-ip-firewall is set to yes .<br>for-vlan  (yes |<br>no; Default: no ) If you need to use the IP/IPv6 firewall and bridge  vlan-filtering  is enabled (which involves VLAN tag handling), then you<br>should also enable  use-ip-firewall-for-vlan=yes .<br>When this setting is enabled and packets are routed between VLAN interfaces (e.g., /interface/vlan), the  in-interface  in the<br>IP firewall's  prerouting  chain will match the bridge interface instead of the individual VLAN interface.<br>allow-fast-path  ( Whether to enable a bridge Fast Path globally.<br>yes | no;<br>Default: yes )<br>bridge-fast-path- Shows whether a bridge Fast Path is active globally, Fast Path status per bridge interface is not displayed.<br>active  (yes | no;<br>Default: )<br>bridge-fast-path- Shows packet count forwarded by bridge Fast Path.<br>packets  (integer;<br>Default: )<br>bridge-fast-path- Shows byte count forwarded by bridge Fast Path.<br>bytes  (integer;<br>Default: )<br>bridge-fast- Shows packet count forwarded by bridge Fast Forward.<br>forward-packets  (<br>integer; Default: )<br>bridge-fast- Shows byte count forwarded by bridge Fast Forward.<br>forward-bytes  (i<br>nteger; Default: )<br>**----- End of picture text -----**<br>
+
+
+**==> picture [13 x 13] intentionally omitted <==**
+
+In case you want to assign Simple Queues or global Queue Trees to traffic that is being forwarded by a bridge, then you need to enable the `use-ip-firewall` property. Without using this property the bridge traffic will never reach the postrouting chain, Simple Queues and global Queue Trees are working in the postrouting chain. To assign Simple Queues or global Queue Trees for VLAN or PPPoE traffic in a bridge you should enable appropriate properties as well.

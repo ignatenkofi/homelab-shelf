@@ -9,11 +9,41 @@
 
 ## Router OS
 
-### Mikrotik RouterOS — full manual (split by chapter)
+### Mikrotik RouterOS — full manual (split into 29 chapters)
 
-Полный файл: [MIKROTIK_RouterOS_M.md](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS_M.md) — 4.5 MB, PDF-экстракт получился шумным (чистое автосплит-разделение по главам невозможно). Использовать для **локального grep / keyword-поиска** в репо.
+Полный файл: [MIKROTIK_RouterOS_M.md](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS_M.md) — 4.2 MB (pymupdf-извлечение, чистая структура). Лучше не тянуть целиком — ниже 29 chapter'ов, каждый со своим SUBINDEX'ом, из которого AI fetch'ит нужную секцию (~1-3 KB). Содержит ~4200 секций суммарно.
 
-Для онлайн-чтения: официальная база — <https://help.mikrotik.com/docs/>.
+Online official docs: <https://help.mikrotik.com/docs/>
+
+- **Chapter  1: Front Matter & TOC** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/01-front-matter-toc/SUBINDEX.md)) — 23 sections
+- **Chapter  2: Kernel version** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/02-kernel-version/SUBINDEX.md)) — 149 sections
+- **Chapter  3: Backup** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/03-backup/SUBINDEX.md)) — 149 sections
+- **Chapter  4: IPv4 Addressing** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/04-ipv4-addressing/SUBINDEX.md)) — 149 sections
+- **Chapter  5: Overview** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/05-overview/SUBINDEX.md)) — 149 sections
+- **Chapter  6: Example:** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/06-example/SUBINDEX.md)) — 149 sections
+- **Chapter  7: Properties** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/07-properties/SUBINDEX.md)) — 149 sections
+- **Chapter  8: Multiple switch groups** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/08-multiple-switch-groups/SUBINDEX.md)) — 149 sections
+- **Chapter  9: Introduction** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/09-introduction/SUBINDEX.md)) — 149 sections
+- **Chapter 10: Summary** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/10-summary/SUBINDEX.md)) — 149 sections
+- **Chapter 11: Sub-menu: `/interface bridge msti`** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/11-sub-menu-interface-bridge-msti/SUBINDEX.md)) — 149 sections
+- **Chapter 12: RED (SFQ)** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/12-red-sfq/SUBINDEX.md)) — 149 sections
+- **Chapter 13: Introduction** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/13-introduction/SUBINDEX.md)) — 149 sections
+- **Chapter 14: Usage Example** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/14-usage-example/SUBINDEX.md)) — 149 sections
+- **Chapter 15: Removing and disabling connections** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/15-removing-and-disabling-connections/SUBINDEX.md)) — 149 sections
+- **Chapter 16: Configuration Example** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/16-configuration-example/SUBINDEX.md)) — 149 sections
+- **Chapter 17: Topology** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/17-topology/SUBINDEX.md)) — 149 sections
+- **Chapter 18: Commands** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/18-commands/SUBINDEX.md)) — 149 sections
+- **Chapter 19: Protocols and ports** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/19-protocols-and-ports/SUBINDEX.md)) — 149 sections
+- **Chapter 20: use-ipsec is set to required to make sure that only IPsec encapsulated L2TP connections are accepted.** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/20-use-ipsec-is-set-to-required-to-make-sure-that-only-ipsec-encapsulated/SUBINDEX.md)) — 149 sections
+- **Chapter 21: `/ip/firewall/filter`** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/21-ipfirewallfilter/SUBINDEX.md)) — 149 sections
+- **Chapter 22: CAPsMAN - CAP simple configuration example:** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/22-capsman---cap-simple-configuration-example/SUBINDEX.md)) — 149 sections
+- **Chapter 23: Security profile and access point matching in the connect list** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/23-security-profile-and-access-point-matching-in-the-connect-list/SUBINDEX.md)) — 149 sections
+- **Chapter 24: CAPsMAN device:** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/24-capsman-device/SUBINDEX.md)) — 149 sections
+- **Chapter 25: Advertisers** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/25-advertisers/SUBINDEX.md)) — 149 sections
+- **Chapter 26: Storage Type** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/26-storage-type/SUBINDEX.md)) — 149 sections
+- **Chapter 27: Power-cycle settings** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/27-power-cycle-settings/SUBINDEX.md)) — 149 sections
+- **Chapter 28: Properties** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/28-properties/SUBINDEX.md)) — 149 sections
+- **Chapter 29: Option A: Get an image from an external library** ([SUBINDEX](https://raw.githubusercontent.com/ignatenkofi/gh.project.homelab/main/DOCS/markdown/MIKROTIK_RouterOS/29-option-a-get-an-image-from-an-external-library/SUBINDEX.md)) — 170 sections
 
 
 ## Router

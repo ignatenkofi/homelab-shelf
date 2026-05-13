@@ -1,0 +1,3 @@
+## By changing some wireless settings the wireless link works unstable 
+
+Sometimes when you change some wireless setting for tuning the links you got so far that the link isn't establishing any more or works unstable and you don't remember what settings you had in the beginning. In this case, you can use the reset-configuration command in the wireless menu - it will reset the all the wireless settings for the specific wireless interface and you will be able to configure the interface from the start. Note that executing this command also disables the interface, so please be careful not to execute this command if you are configuring router remotely using that wireless link that you want to reset the configuration.

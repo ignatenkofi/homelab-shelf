@@ -1,0 +1,11 @@
+## Properties 
+
+**==> picture [516 x 42] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Property Description<br>name  (string; Default: ) The name of the user group<br>**----- End of picture text -----**<br>
+
+
+322 
+
+policy (local | telnet | ssh | ftp | reboot | read | write | List of allowed policies: policy | test | winbox | password | web | sniff | sensitive | api | rest-api | romon ; Default: none ) Login policies: local - policy that grants rights to log in locally via console telnet - policy that grants rights to log in remotely via telnet ssh - policy that grants rights to log in remotely via secure shell protocol web - policy that grants rights to log in remotely via WebFig. winbox - policy that grants rights to log in remotely via WinBox and bandwidth test authentication password - policy that grants rights to change the password api - grants rights to access router via API. rest-api - grants rights to access the router via REST API. ftp - policy that grants full rights to log in remotely via FTP.  Allows to read/write/erase files and to transfer files from/to the router. Should be used together with read/write policies. romon - policy that grants rights to connect to the RoMon server. Config Policies: reboot - policy that allows rebooting the router read - policy that grants read access to the router's configuration. All console commands that do not alter the router's configuration are allowed. Doesn't affect FTP write - policy that grants write access to the router's configuration, except for user management. This policy does not allow to read the configuration, so make sure to enable read policy as well policy - policy that grants user management rights. Should be used together with the write policy. Allows also to see global variables created by other users (requires also 'test' policy). Allows to design skins (requires also "sensitive" policy). test - policy that grants rights to run ping, traceroute, bandwidth-test, wireless scan, snooper, fetch, email and other test commands sensitive - grants rights to change "hide sensitive" option, if this policy is disabled sensitive information is not displayed. sniff - policy that grants rights to use packet sniffer tool, torch tool, traffic generator. skin (name; Default: default ) Used skin for WebFig
