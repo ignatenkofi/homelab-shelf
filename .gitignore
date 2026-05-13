@@ -3,26 +3,27 @@
 # 1. Ignore everything at the root
 /*
 
-# 2. But keep .gitignore itself and the DOCS/ folder structure
+# 2. Keep these root files/dirs
 !.gitignore
+!INDEX.md
 !/DOCS/
 
 # 3. Inside DOCS/, ignore all direct contents
 /DOCS/*
 
-# 4. But keep these two subdirectories (and everything inside them)
+# 4. Allow these subdirectories (and everything inside them)
 !/DOCS/compressed/
 !/DOCS/markdown/
 
-# 5. Always ignore OS junk anywhere
+# 5. Always ignore OS / iCloud junk anywhere
 .DS_Store
 Thumbs.db
+* 2.*
+* 2/
 
-# --- Giants kept local, replaced by split subdirs ---
+# --- Giants ---
 # INTEL X550 datasheet — split version replaces the original.
-# Original stays on disk locally as source-of-truth, NOT tracked.
 DOCS/markdown/INTEL_X550_DS.md
-# Allow the split subdir for INTEL.
 !/DOCS/markdown/INTEL_X550/
 !/DOCS/markdown/INTEL_X550/**
 
