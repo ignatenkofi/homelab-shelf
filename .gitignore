@@ -17,3 +17,15 @@
 # 5. Always ignore OS junk anywhere
 .DS_Store
 Thumbs.db
+
+# --- Giants kept local, replaced by split subdirs ---
+# INTEL X550 datasheet — split version replaces the original.
+# Original stays on disk locally as source-of-truth, NOT tracked.
+DOCS/markdown/INTEL_X550_DS.md
+# Allow the split subdir for INTEL.
+!/DOCS/markdown/INTEL_X550/
+!/DOCS/markdown/INTEL_X550/**
+
+# MIKROTIK RouterOS — kept as single file (PDF extract too noisy to split cleanly).
+# Auto-generated split lives locally only.
+DOCS/markdown/MIKROTIK_RouterOS/
