@@ -1,3 +1,0 @@
-## Requirements 
-
-HotSpot captive portal

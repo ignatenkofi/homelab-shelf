@@ -1,1 +1,0 @@
-## RouterOS version 7

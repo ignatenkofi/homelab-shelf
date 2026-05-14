@@ -1,6 +1,0 @@
-## Properties 
-
-**==> picture [516 x 240] intentionally omitted <==**
-
-**----- Start of picture text -----**<br>
-Property Description<br>authentication  (pap | chap |  Authentication methods that server will accept.<br>mschap1 | mschap2; Default:<br>mschap1,mschap2 )<br>default-profile  (name; Default:<br>default-encryption )<br>enabled  (yes | no; Default:  no ) Defines whether PPTP server is enabled or not.<br>keepalive-timeout  (time;  If server during keepalive period does not receive any packet, it will send keepalive packets every second five times. If<br>Default:  30 ) the server does not receives response from the client, then disconnect after 5 seconds. Logs will show 5x "LCP<br>missed echo reply" messages and then disconnect.<br>max-mru  (integer; Default:  1450 Maximum Receive Unit. Max packet size that PPTP interface will be able to receive without packet fragmentation.<br>)<br>max-mtu  (integer; Default:  1450 Maximum Transmission Unit. Max packet size that PPTP interface will be able to send without packet fragmentation.<br>)<br>mrru  (disabled | integer;  Maximum packet size that can be received on the link. If a packet is bigger than tunnel MTU, it will be split into<br>Default:  disabled ) multiple packets, allowing full size IP or Ethernet packets to be sent over the tunnel.<br>**----- End of picture text -----**<br>

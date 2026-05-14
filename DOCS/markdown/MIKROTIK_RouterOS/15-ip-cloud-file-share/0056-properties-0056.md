@@ -1,6 +1,0 @@
-## Properties 
-
-**==> picture [500 x 331] intentionally omitted <==**
-
-**----- Start of picture text -----**<br>
-Property Description<br>code  (integer:1..254;  dhcp option code. All codes are available at http://www.iana.org/assignments/bootp-dhcp-parameters<br>Default: )<br>name  (string; Default: ) Descriptive name of the option<br>value  (string; Default: ) Parameter's value. Available data types for options are:<br>'test' -> ASCII to Hex 0x74657374<br>'10.10.10.10' -> Unicode IP to Hex 0x0a0a0a0a<br>s'10.10.10.10' -> ASCII to hex 0x31302e31302e31302e3130<br>s'160' -> ASCII to hex 0x313630<br>'10' -> Decimal to Hex 0x0a<br>0x0a0a -> No conversion<br>$(VARIABLE) -> hardcoded values<br>RouterOS has predefined variables that can be used:<br>HOSTNAME - client hostname<br>RADIUS_MT_STR1 - from radius MT attr nr. 24<br>RADIUS_MT_STR2 - from radius MT attr nr. 25<br>REMOTE_ID - agent remote-id<br>NETWORK_GATEWAY - the first gateway from '/ip dhcp-server network', note that this option won't work if<br>used from lease<br>Now it is also possible to combine data types into one, for example: "0x01'vards'$(HOSTNAME)"<br>For example if HOSTNAME is 'kvm', then raw value will be 0x0176617264736b766d.<br>raw-value  (HEX string ) Read-only field which shows raw DHCP option value (the format actually sent out)<br>**----- End of picture text -----**<br>

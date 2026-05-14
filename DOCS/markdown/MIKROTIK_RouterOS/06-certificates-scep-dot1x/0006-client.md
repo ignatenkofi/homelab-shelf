@@ -1,3 +1,0 @@
-## Client 
-
-Supplicant configuration settings.

@@ -1,5 +1,0 @@
-## Introduction 
-
-```
-/tool dns-update
-```

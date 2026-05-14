@@ -31,3 +31,10 @@ DOCS/markdown/INTEL_X550_DS.md
 # Auto-generated split — NOW tracked (hierarchical 2-level INDEX)
 !/DOCS/markdown/MIKROTIK_RouterOS/
 !/DOCS/markdown/MIKROTIK_RouterOS/**
+
+# --- Encyclopedia split subdirs ---
+# Split chapter trees — tracked. Originals kept as single .md files alongside.
+!/DOCS/markdown/INTEL_X550/
+!/DOCS/markdown/INTEL_X550/**
+!/DOCS/markdown/MIKROTIK_RouterOS/
+!/DOCS/markdown/MIKROTIK_RouterOS/**

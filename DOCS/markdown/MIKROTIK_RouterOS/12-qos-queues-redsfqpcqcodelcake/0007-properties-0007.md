@@ -1,6 +1,0 @@
-## Properties 
-
-**==> picture [516 x 248] intentionally omitted <==**
-
-**----- Start of picture text -----**<br>
-Property Description<br>fq-codel-ce-threshold  (def Marks packets above a configured threshold with ECN.<br>ault: )<br>fq-codel-ecn  (default:  yes ) An option is used to mark packets instead of dropping them.<br>fq-codel-flows  (default:  10 A number of flows into which the incoming packets are classified.<br>24 )<br>fq-codel-interval  (default:  1 Interval should be set on the order of the worst-case RTT through the bottleneck giving endpoints sufficient time to react.<br>00ms )<br>fq-codel-limit  (default:  102 Queue limit, when the limit is reached, incoming packets are dropped.<br>40 )<br>fq-codel-memlimit A total number of bytes that can be queued in this FQ-CoDel instance. Will be enforced from the fq-codel-limit parameter.<br>(default:  32.0MiB )<br>fq-codel-quantum  (default:  A number of bytes used as 'deficit' in the fair queuing algorithm. Default (1514 bytes) corresponds to the Ethernet MTU<br>1514 ) plus the hardware header length of 14 bytes.<br>fq-codel-target  (default:  5 Represents an acceptable minimum persistent queue delay.<br>ms )<br>**----- End of picture text -----**<br>

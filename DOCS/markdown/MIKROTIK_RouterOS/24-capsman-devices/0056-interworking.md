@@ -1,3 +1,0 @@
-## Interworking 
-
-Interworking is the occurrence of two or more things working together. For a better Wireless network experience information about the network must be exchanged between Access Points and Wireless client devices, the information that can be found in basic Wireless beacons and probe requests is limited. For this reason, the IEEE 802.11u™-2011 (Interworking with External Networks) standard was created, that specifies how devices should exchange information between each other. Network discovery and Access Point selection process can be enhanced with the interworking service. Wireless client devices can have more criteria upon which they can choose the network with which to associate.

@@ -1,3 +1,0 @@
-## Quick Example 
-
-**==> picture [504 x 104] intentionally omitted <==**

@@ -1,6 +1,0 @@
-## Parameters 
-
-**==> picture [516 x 250] intentionally omitted <==**
-
-**----- Start of picture text -----**<br>
-Property Description<br>ip-address Range of IP addresses accepted as clients if empty 0.0.0.0/0 will be used<br>(required)<br>allow- If set to yes TFTP server will allow the sequence number to roll over when the maximum value is reached. This is used to enable large<br>rollover  (D downloads using the TFTP server.<br>efault: No)<br>req- Requested filename as a regular expression (regex) if a field is left empty it defaults to .*<br>filename<br>real- If req-filename and real-filename values are set and valid, the requested filename will be replaced with matched file. This field has to be<br>filename set. If multiple regex is specified in req-filename, with this field you can set which ones should match, so this rule is validated. The real-<br>filename format for using multiple regex  is filename\0\5\6<br>allow  (def To allow connection if the above fields are set. if no, a connection will be interrupted<br>ault: yes)<br>read-only  ( Sets if a file can be written to, if set to "yes" write attempt will fail with error<br>default: no)<br>hits  (read- How many times this access rule entry has been used (read-only)<br>only)<br>**----- End of picture text -----**<br>
