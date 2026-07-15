@@ -6,6 +6,7 @@
 # 2. Keep these root files/dirs
 !.gitignore
 !INDEX.md
+!shelf.yml
 !/DOCS/
 
 # 3. Inside DOCS/, ignore all direct contents
