@@ -7,6 +7,7 @@
 !.gitignore
 !INDEX.md
 !shelf.yml
+!/.github/
 !/DOCS/
 
 # 3. Inside DOCS/, ignore all direct contents
