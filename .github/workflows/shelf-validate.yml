@@ -1,0 +1,26 @@
+# Advisory-стадия shelf-spec (shelf-spec#4): валидация полки против спека.
+# continue-on-error — репорт в логе, мерж не блокирует; перевод в blocking —
+# отдельное решение после чистого прогона (docs/advisory-ci.md в shelf-spec).
+name: shelf-validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  shelf-validate:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install shelf-spec
+        run: pip install "git+https://x-access-token:${{ secrets.SHELF_SPEC_TOKEN }}@github.com/ignatenkofi/shelf-spec.git"
+
+      - name: Validate shelf against shelf-spec
+        run: shelf-spec validate --ci .
