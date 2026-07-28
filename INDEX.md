@@ -7,6 +7,10 @@
 
 Этот файл — единственный, что нужно держать в Claude-проекте. Когда нужен ответ по конкретной железке — найди её ниже, открой ссылку (или попроси AI: «достань мне раздел X из DOCS/markdown/...»). Большие манулы (Mikrotik RouterOS, Intel X550) разложены по разделам — тяни только нужный, а не весь файл.
 
+## Tutorials
+
+- **IPv6 в хоумлабе: ULA → HE 6in4 → dual-stack + home.arpa (по вечерам)** — [TUTORIAL_IPv6_HomeLab.md](https://raw.githubusercontent.com/ignatenkofi/homelab-shelf/main/DOCS/markdown/TUTORIAL_IPv6_HomeLab.md)
+
 ## Router OS
 
 ### Mikrotik RouterOS — full manual (split by chapter)
