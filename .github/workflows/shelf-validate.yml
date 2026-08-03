@@ -1,6 +1,19 @@
 # Advisory-стадия shelf-spec (shelf-spec#4): валидация полки против спека.
 # continue-on-error — репорт в логе, мерж не блокирует; перевод в blocking —
 # отдельное решение после чистого прогона (docs/advisory-ci.md в shelf-spec).
+#
+# ПОЧЕМУ ГЕЙТ ПЕРЕД УСТАНОВКОЙ. shelf-spec — приватный репозиторий, и
+# `pip install git+https://...` работает только с секретом SHELF_SPEC_TOKEN
+# (fine-grained PAT, Contents:read). Без секрета шаг установки падает, шаг
+# валидации не выполняется вовсе, а continue-on-error на джобе оставляет
+# прогон зелёным — то есть полка выглядит покрытой, не будучи проверенной
+# ничем. Это ровно тот silent no-op, о котором предупреждает сам
+# docs/advisory-ci.md в shelf-spec, и та же форма гейта, что уже принята
+# в docshelf-mcp (#64).
+#
+# Почему механически, а не инструкцией: доку предписывает «выдай токен до
+# подключения джобы», и это покрывает момент подключения, но не протухание
+# — fine-grained PAT имеет срок.
 name: shelf-validate
 
 on:
@@ -12,15 +25,27 @@ jobs:
   shelf-validate:
     runs-on: ubuntu-latest
     continue-on-error: true
+    env:
+      HAVE_TOKEN: ${{ secrets.SHELF_SPEC_TOKEN != '' }}
     steps:
+      - name: Без SHELF_SPEC_TOKEN — честный скип, а не тихий no-op
+        if: env.HAVE_TOKEN != 'true'
+        run: |
+          echo "::notice::SHELF_SPEC_TOKEN не задан — валидация полки НЕ выполнялась."
+          echo "::notice::Выдай fine-grained PAT (Contents:read на shelf-spec) и положи в секреты этого репо."
+
       - uses: actions/checkout@v7
+        if: env.HAVE_TOKEN == 'true'
 
       - uses: actions/setup-python@v6
+        if: env.HAVE_TOKEN == 'true'
         with:
           python-version: "3.12"
 
       - name: Install shelf-spec
+        if: env.HAVE_TOKEN == 'true'
         run: pip install "git+https://x-access-token:${{ secrets.SHELF_SPEC_TOKEN }}@github.com/ignatenkofi/shelf-spec.git"
 
       - name: Validate shelf against shelf-spec
+        if: env.HAVE_TOKEN == 'true'
         run: shelf-spec validate --ci .
